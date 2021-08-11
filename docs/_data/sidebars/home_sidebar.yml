@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: Title
       url: sandbox.html
+    - output: web,pdf
+      title: db
+      url: db.html
     output: web
     title: mranderson
   output: web

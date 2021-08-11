@@ -144,7 +144,7 @@ nb_path: "nbs/sandbox.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="start_fresh" class="doc_header"><code>start_fresh</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/sandbox.py#L35" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>start_fresh</code>(<strong><code>driver</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="start_fresh" class="doc_header"><code>start_fresh</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/sandbox.py#L34" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>start_fresh</code>(<strong><code>driver</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -175,10 +175,44 @@ nb_path: "nbs/sandbox.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="run_neo4j" class="doc_header"><code>run_neo4j</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/sandbox.py#L48" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>run_neo4j</code>(<strong><code>version</code></strong>=<em><code>'4.3.2'</code></em>, <strong><code>run_on_set_ports</code></strong>=<em><code>False</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="run_neo4j" class="doc_header"><code>run_neo4j</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/sandbox.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>run_neo4j</code>(<strong><code>version</code></strong>=<em><code>'4.3.2'</code></em>, <strong><code>run_on_set_ports</code></strong>=<em><code>False</code></em>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 <p>Spin up a new neo4j in a docker instance if one is not already running.
 Set the ichordb default driver to point to this test database.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="start_neo4j" class="doc_header"><code>start_neo4j</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/sandbox.py#L68" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>start_neo4j</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+</blockquote>
+<p>Convenience function to
+Runs a neo4j container.  Sets the default driver to use that container
+Returns the container and the driver objects</p>
 
 </div>
 
@@ -205,25 +239,7 @@ Set the ichordb default driver to point to this test database.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">container_name</span> <span class="o">=</span> <span class="s1">&#39;mranderson_unittest_sandbox&#39;</span>
-<span class="n">neo4j</span><span class="o">=</span><span class="n">run_neo4j</span><span class="p">(</span><span class="n">container_name</span><span class="o">=</span><span class="n">container_name</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">driver</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">make_driver</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">neo4j</span><span class="p">)</span>
-<span class="n">db</span><span class="o">.</span><span class="n">set_default_driver</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+<span class="n">container</span><span class="p">,</span> <span class="n">driver</span> <span class="o">=</span> <span class="n">start_neo4j</span><span class="p">(</span><span class="n">container_name</span><span class="o">=</span><span class="n">container_name</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -258,10 +274,79 @@ Set the ichordb default driver to point to this test database.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">neo4j</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">container</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">HTTPError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/api/client.py</span> in <span class="ansi-cyan-fg">_raise_for_status</span><span class="ansi-blue-fg">(self, response)</span>
+<span class="ansi-green-intense-fg ansi-bold">    267</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 268</span><span class="ansi-red-fg">             </span>response<span class="ansi-blue-fg">.</span>raise_for_status<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    269</span>         <span class="ansi-green-fg">except</span> requests<span class="ansi-blue-fg">.</span>exceptions<span class="ansi-blue-fg">.</span>HTTPError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/requests/models.py</span> in <span class="ansi-cyan-fg">raise_for_status</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    952</span>         <span class="ansi-green-fg">if</span> http_error_msg<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 953</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> HTTPError<span class="ansi-blue-fg">(</span>http_error_msg<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    954</span> 
+
+<span class="ansi-red-fg">HTTPError</span>: 404 Client Error: Not Found for url: http+docker://localhost/v1.41/containers/6a4e53fb75b68a13cee5a6ddec19762778d8a0ac4ce23b365c12a251624892a3/stop
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">NotFound</span>                                  Traceback (most recent call last)
+<span class="ansi-green-fg">/tmp/ipykernel_22000/950193479.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>container<span class="ansi-blue-fg">.</span>stop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/models/containers.py</span> in <span class="ansi-cyan-fg">stop</span><span class="ansi-blue-fg">(self, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    434</span>                 If the server returns an error<span class="ansi-blue-fg">.</span>
+<span class="ansi-green-intense-fg ansi-bold">    435</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">--&gt; 436</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>client<span class="ansi-blue-fg">.</span>api<span class="ansi-blue-fg">.</span>stop<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>id<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    437</span> 
+<span class="ansi-green-intense-fg ansi-bold">    438</span>     <span class="ansi-green-fg">def</span> top<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/utils/decorators.py</span> in <span class="ansi-cyan-fg">wrapped</span><span class="ansi-blue-fg">(self, resource_id, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span>                     <span class="ansi-blue-fg">&#39;Resource ID was not provided&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>                 )
+<span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> f<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> resource_id<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span>         <span class="ansi-green-fg">return</span> wrapped
+<span class="ansi-green-intense-fg ansi-bold">     21</span>     <span class="ansi-green-fg">return</span> decorator
+
+<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/api/container.py</span> in <span class="ansi-cyan-fg">stop</span><span class="ansi-blue-fg">(self, container, timeout)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1168</span>             conn_timeout <span class="ansi-blue-fg">+=</span> timeout
+<span class="ansi-green-intense-fg ansi-bold">   1169</span>         res <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_post<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> params<span class="ansi-blue-fg">=</span>params<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">=</span>conn_timeout<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 1170</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_raise_for_status<span class="ansi-blue-fg">(</span>res<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1171</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1172</span>     <span class="ansi-blue-fg">@</span>utils<span class="ansi-blue-fg">.</span>check_resource<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;container&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/api/client.py</span> in <span class="ansi-cyan-fg">_raise_for_status</span><span class="ansi-blue-fg">(self, response)</span>
+<span class="ansi-green-intense-fg ansi-bold">    268</span>             response<span class="ansi-blue-fg">.</span>raise_for_status<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    269</span>         <span class="ansi-green-fg">except</span> requests<span class="ansi-blue-fg">.</span>exceptions<span class="ansi-blue-fg">.</span>HTTPError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 270</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> create_api_error_from_http_exception<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    271</span> 
+<span class="ansi-green-intense-fg ansi-bold">    272</span>     <span class="ansi-green-fg">def</span> _result<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">,</span> json<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> binary<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/errors.py</span> in <span class="ansi-cyan-fg">create_api_error_from_http_exception</span><span class="ansi-blue-fg">(e)</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     30</span>             cls <span class="ansi-blue-fg">=</span> NotFound
+<span class="ansi-green-fg">---&gt; 31</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> cls<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">=</span>response<span class="ansi-blue-fg">,</span> explanation<span class="ansi-blue-fg">=</span>explanation<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     32</span> 
+<span class="ansi-green-intense-fg ansi-bold">     33</span> 
+
+<span class="ansi-red-fg">NotFound</span>: 404 Client Error for http+docker://localhost/v1.41/containers/6a4e53fb75b68a13cee5a6ddec19762778d8a0ac4ce23b365c12a251624892a3/stop: Not Found (&#34;No such container: 6a4e53fb75b68a13cee5a6ddec19762778d8a0ac4ce23b365c12a251624892a3&#34;)</pre>
+</div>
+</div>
+
 </div>
 </div>
 

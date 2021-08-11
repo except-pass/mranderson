@@ -1,6 +1,6 @@
 ---
 
-title: Title
+title: db
 
 
 keywords: fastai
@@ -29,6 +29,32 @@ nb_path: "nbs/db.ipynb"
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Default-Values">Default Values<a class="anchor-link" href="#Default-Values"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Custom-Exceptions">Custom Exceptions<a class="anchor-link" href="#Custom-Exceptions"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -128,7 +154,7 @@ nb_path: "nbs/db.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="make_driver" class="doc_header"><code>make_driver</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L39" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>make_driver</code>(<strong><code>uri</code></strong>=<em><code>'bolt://localhost:7687'</code></em>, <strong><code>auth</code></strong>=<em><code>'neo4j/talosadmin'</code></em>, <strong><code>container</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="make_driver" class="doc_header"><code>make_driver</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L42" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>make_driver</code>(<strong><code>uri</code></strong>=<em><code>'bolt://localhost:7687'</code></em>, <strong><code>auth</code></strong>=<em><code>'neo4j/neo4jadmin'</code></em>, <strong><code>container</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Create a driver for neo4j database.
 uri: str
@@ -160,7 +186,7 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="set_default_driver" class="doc_header"><code>set_default_driver</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L58" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>set_default_driver</code>(<strong><code>driver</code></strong>)</p>
+<h4 id="set_default_driver" class="doc_header"><code>set_default_driver</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L61" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>set_default_driver</code>(<strong><code>driver</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -184,7 +210,7 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="default_driver" class="doc_header"><code>default_driver</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L62" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>default_driver</code>(<strong><code>uri</code></strong>=<em><code>'bolt://localhost:7687'</code></em>, <strong><code>auth</code></strong>=<em><code>'neo4j/talosadmin'</code></em>, <strong><code>force_remake</code></strong>=<em><code>False</code></em>)</p>
+<h4 id="default_driver" class="doc_header"><code>default_driver</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L65" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>default_driver</code>(<strong><code>uri</code></strong>=<em><code>'bolt://localhost:7687'</code></em>, <strong><code>auth</code></strong>=<em><code>'neo4j/neo4jadmin'</code></em>, <strong><code>force_remake</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 
 </div>
@@ -208,7 +234,7 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="tearDown" class="doc_header"><code>tearDown</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L74" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>tearDown</code>()</p>
+<h4 id="tearDown" class="doc_header"><code>tearDown</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L77" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>tearDown</code>()</p>
 </blockquote>
 
 </div>
@@ -245,8 +271,16 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="Query" class="doc_header"><code>class</code> <code>Query</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L82" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Query</code>(<strong><code>driver</code></strong>=<em><code>None</code></em>)</p>
+<h2 id="Query" class="doc_header"><code>class</code> <code>Query</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L85" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Query</code>(<strong><code>driver</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
+<p>A cypher query object.  The flow here is to instantiate a query
+then add lines to it.  It is only sent to the server when you execute
+the query with .results, .data, .create, etc.</p>
+<p>e.g. To get a few nodes
+q = Query()
+q.add("MATCH (n)")
+q.add("RETURN n LIMIT 5")
+q.data()</p>
 
 </div>
 
@@ -282,7 +316,59 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="node" class="doc_header"><code>node</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L154" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>node</code>(<strong><code>label</code></strong>=<em><code>None</code></em>, <strong><code>variable</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="node" class="doc_header"><code>node</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L170" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>node</code>(<strong><code>label</code></strong>=<em><code>None</code></em>, <strong><code>variable</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+</blockquote>
+<p>Returns node text of the form
+(var_name:Label {key:value, key2:value2...})</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="relationship" class="doc_header"><code>relationship</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L198" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>relationship</code>(<strong><code>rel_type</code></strong>, <strong><code>_name</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+</blockquote>
+<p>Returns relationship text in the form
+[var_name: REL_TYPE {key: value,...}]</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="MATCH" class="doc_header"><code>MATCH</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L218" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>MATCH</code>(<strong><code>label</code></strong>, <strong><code>variable</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -306,7 +392,7 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="relationship" class="doc_header"><code>relationship</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L178" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>relationship</code>(<strong><code>rel_type</code></strong>, <strong><code>name</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="RETURN" class="doc_header"><code>RETURN</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L221" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>RETURN</code>(<strong>*<code>args</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -330,7 +416,60 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="MATCH" class="doc_header"><code>MATCH</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L194" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>MATCH</code>(<strong><code>label</code></strong>, <strong><code>variable</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="WITH" class="doc_header"><code>WITH</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L224" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>WITH</code>(<strong>*<code>args</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">TESTCASE</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;Thing&#39;</span><span class="p">,</span> <span class="s1">&#39;var&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;abc&#39;</span><span class="p">),</span> <span class="s1">&#39;(var:Thing {id: &quot;abc&quot;})&#39;</span><span class="p">)</span>
+<span class="n">TESTCASE</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;Thing&#39;</span><span class="p">,</span> <span class="s1">&#39;var&#39;</span><span class="p">),</span> <span class="s1">&#39;(var:Thing)&#39;</span><span class="p">)</span>
+<span class="n">TESTCASE</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;Thing&#39;</span><span class="p">,</span> <span class="s1">&#39;var&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;unittest&#39;</span><span class="p">),</span> <span class="s1">&#39;(var:Thing {id: &quot;abc&quot;,name: &quot;unittest&quot;})&#39;</span><span class="p">)</span>
+
+<span class="n">TESTCASE</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;LOVES&#39;</span><span class="p">),</span> <span class="s1">&#39;[:LOVES]&#39;</span><span class="p">)</span>
+<span class="n">TESTCASE</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;LOVES&#39;</span><span class="p">,</span> <span class="s1">&#39;rel_name&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;property name&#39;</span><span class="p">),</span> <span class="s1">&#39;[rel_name:LOVES {name: &quot;property name&quot;}]&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="node_to_dict" class="doc_header"><code>node_to_dict</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L229" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>node_to_dict</code>(<strong><code>resp</code></strong>:<code>dict</code>)</p>
 </blockquote>
 
 </div>
@@ -354,116 +493,9 @@ container: docker container object
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="RETURN" class="doc_header"><code>RETURN</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L197" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>RETURN</code>(<strong>*<code>args</code></strong>)</p>
+<h4 id="fetch" class="doc_header"><code>fetch</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L232" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fetch</code>(<strong><code>label</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="WITH" class="doc_header"><code>WITH</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L200" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>WITH</code>(<strong>*<code>args</code></strong>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="node_to_dict" class="doc_header"><code>node_to_dict</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L207" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>node_to_dict</code>(<strong><code>resp</code></strong>:<code>dict</code>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="fetch" class="doc_header"><code>fetch</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L210" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fetch</code>(<strong><code>label</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
-</blockquote>
-<p>Quickly find a single node by label and properties and return it as a dictionary</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="set_properties" class="doc_header"><code>set_properties</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L220" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>set_properties</code>(<strong><code>label</code></strong>:<code>str</code>, <strong><code>search_properties</code></strong>:<code>dict</code>, <strong>**<code>kwargs</code></strong>)</p>
-</blockquote>
-<p>Find a node of and set properties to it
-label: string of the node Label
-search_properties: dict of properties the existing node must have.  e.g. eid="abc123"
-additional kwargs will be applied to the node</p>
+<p>Query for a single node by label and properties and return it as a dictionary</p>
 
 </div>
 
@@ -488,6 +520,12 @@ additional kwargs will be applied to the node</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Relationships">Relationships<a class="anchor-link" href="#Relationships"> </a></h3>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -499,7 +537,37 @@ additional kwargs will be applied to the node</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="unlink" class="doc_header"><code>unlink</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L239" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unlink</code>(<strong><code>source</code></strong>:<code>str</code>, <strong><code>target</code></strong>:<code>str</code>, <strong><code>relationship</code></strong>:<code>str</code>)</p>
+<h4 id="link" class="doc_header"><code>link</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L244" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>link</code>(<strong><code>node1</code></strong>, <strong><code>node1name</code></strong>, <strong><code>node2</code></strong>, <strong><code>node2name</code></strong>, <strong><code>rel_type</code></strong>, <strong>**<code>rel_kwargs</code></strong>)</p>
+</blockquote>
+<p>Create relationship (node1)-[:rel_type]-&gt;(node2)
+node1 and node2 must already exist.</p>
+<p>node1: str describing a cypher node
+node1name: the variable name used in node1
+rel_type: the type of relationship we are creating from node1 to node2
+rel_kwargs: the properties you want the relationship to have, if any</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="unlink" class="doc_header"><code>unlink</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L263" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>unlink</code>(<strong><code>source</code></strong>:<code>str</code>, <strong><code>target</code></strong>:<code>str</code>, <strong><code>relationship</code></strong>:<code>str</code>)</p>
 </blockquote>
 <p>Delete the relationship between the source and target nodes
 (source)-[:RELATIONSHIP]-&gt;(target)
@@ -510,65 +578,6 @@ target: str
 relationship: str
     Type of relationship to delete</p>
 <p>Returns a query response</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_properties_of" class="doc_header"><code>get_properties_of</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L258" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_properties_of</code>(<strong><code>label</code></strong>, <strong><code>properties</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
-</blockquote>
-<p>label: str
-    The label of the node youre looking for.  e.g. Equipment
-properties: iterable
-    A list or tuple of the strings of property names
-Any additional kwargs will go to searching for the node.  e.g. {"eid": "device_eid"}
-Returns list of the properties of the node.  Node must be unique.</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="link" class="doc_header"><code>link</code><a href="https://github.com/talosiot-will/mranderson/tree/master/mranderson/db.py#L278" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>link</code>(<strong><code>node1</code></strong>, <strong><code>node1name</code></strong>, <strong><code>node2</code></strong>, <strong><code>node2name</code></strong>, <strong><code>rel_type</code></strong>, <strong>**<code>rel_kwargs</code></strong>)</p>
-</blockquote>
-<p>Create relationship (node1)-[:rel_type]-&gt;(node2)
-node1: str describing a cypher node
-node1name: the variable name used in node1
-rel_type: the type of relationship we are creating from node1 to node2
-rel_kwargs: the properties you want the relationship to have, if any</p>
 
 </div>
 

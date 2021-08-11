@@ -31,7 +31,6 @@ def create_totem(driver=None):
 class NotTestDataset(Exception):
     pass
 
-
 def start_fresh(driver=None):
     if is_empty(driver):
         return True
@@ -69,7 +68,8 @@ def run_neo4j(version=NEO4J_VERSION, run_on_set_ports=False, **kwargs):
 def start_neo4j(*args, **kwargs):
     '''
     Convenience function to
-    Runs a neo4j container and returns the container and the driver
+    Runs a neo4j container.  Sets the default driver to use that container
+    Returns the container and the driver objects
     '''
     container = run_neo4j(*args, **kwargs)
     driver = db.make_driver(container=container)
