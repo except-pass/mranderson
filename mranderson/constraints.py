@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger()
 import traceback
 from neo4j.exceptions import ClientError
-from mranderson import Query
+from .db import Query
 
 def uniqueness(label:str, property_name:str, safely=True):
     '''
