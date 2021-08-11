@@ -39,6 +39,40 @@ nb_path: "nbs/sandbox.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">mranderson</span> <span class="kn">import</span> <span class="n">start_log</span>
+<span class="n">start_log</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;RootLogger root (DEBUG)&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
 <div class="output">
@@ -246,6 +280,75 @@ Returns the container and the driver objects</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[DEBUG] config(find_config_file)2021-08-11 15:14:17,066--&gt; 21.	 Trying paths: [&#39;/home/ubuntu/.docker/config.json&#39;, &#39;/home/ubuntu/.dockercfg&#39;]
+[DEBUG] config(find_config_file)2021-08-11 15:14:17,068--&gt; 25.	 Found file at path: /home/ubuntu/.docker/config.json
+[DEBUG] auth(load_config)2021-08-11 15:14:17,069--&gt; 182.	 Found &#39;auths&#39; section
+[DEBUG] auth(parse_auth)2021-08-11 15:14:17,070--&gt; 142.	 Found entry (registry=&#39;379343436335.dkr.ecr.us-east-1.amazonaws.com&#39;, username=&#39;AWS&#39;)
+[DEBUG] auth(parse_auth)2021-08-11 15:14:17,071--&gt; 142.	 Found entry (registry=&#39;https://index.docker.io/v1/&#39;, username=&#39;wgathright&#39;)
+[DEBUG] connectionpool(_make_request)2021-08-11 15:14:17,089--&gt; 452.	 http://localhost:None &#34;GET /version HTTP/1.1&#34; 200 847
+[DEBUG] connectionpool(_make_request)2021-08-11 15:14:17,094--&gt; 452.	 http://localhost:None &#34;GET /v1.41/containers/mranderson_unittest_sandbox/json HTTP/1.1&#34; 404 61
+[DEBUG] connectionpool(_make_request)2021-08-11 15:14:17,150--&gt; 452.	 http://localhost:None &#34;POST /v1.41/containers/create?name=mranderson_unittest_sandbox HTTP/1.1&#34; 201 88
+[DEBUG] connectionpool(_make_request)2021-08-11 15:14:17,156--&gt; 452.	 http://localhost:None &#34;GET /v1.41/containers/cc0cbf51425b9fbad340bec28c209ba1835f2fe893eb4881c7bdae36abe5f303/json HTTP/1.1&#34; 200 None
+[DEBUG] connectionpool(_make_request)2021-08-11 15:14:17,553--&gt; 452.	 http://localhost:None &#34;POST /v1.41/containers/cc0cbf51425b9fbad340bec28c209ba1835f2fe893eb4881c7bdae36abe5f303/start HTTP/1.1&#34; 204 0
+[DEBUG] connectionpool(_make_request)2021-08-11 15:14:17,558--&gt; 452.	 http://localhost:None &#34;GET /v1.41/containers/cc0cbf51425b9fbad340bec28c209ba1835f2fe893eb4881c7bdae36abe5f303/json HTTP/1.1&#34; 200 None
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:17,564--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:17,575--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:18,581--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:18,586--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:19,597--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:19,603--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:20,613--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:20,616--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:21,622--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:21,626--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:22,630--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:22,634--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:23,643--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:23,646--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:24,650--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:24,654--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:25,657--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:25,661--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:26,665--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:26,669--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:27,672--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:27,676--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:28,679--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:28,683--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:29,686--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:29,692--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:30,701--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:30,708--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:31,718--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:31,724--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:32,733--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:32,740--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:33,749--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:33,752--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:34,761--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:34,767--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:35,777--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:35,781--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:36,783--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:36,798--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:37,809--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:37,817--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] __init__(block_for_startup)2021-08-11 15:14:38,830--&gt; 116.	 Waiting for avilability of {&#39;HostIp&#39;: &#39;0.0.0.0&#39;, &#39;HostPort&#39;: &#39;8398&#39;}
+[DEBUG] connectionpool(_new_conn)2021-08-11 15:14:38,834--&gt; 227.	 Starting new HTTP connection (1): 0.0.0.0:8398
+[DEBUG] connectionpool(_make_request)2021-08-11 15:14:39,015--&gt; 452.	 http://0.0.0.0:8398 &#34;GET / HTTP/1.1&#34; 200 210
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -261,6 +364,38 @@ Returns the container and the driver objects</p>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[DEBUG] addressing(resolve)2021-08-11 15:14:39,030--&gt; 185.	 [#0000]  C: &lt;RESOLVE&gt; 0.0.0.0:8397
+[DEBUG] __init__(_connect)2021-08-11 15:14:39,032--&gt; 1180.	 [#0000]  C: &lt;OPEN&gt; 0.0.0.0:8397
+[DEBUG] __init__(_handshake)2021-08-11 15:14:39,037--&gt; 1243.	 [#CF48]  C: &lt;MAGIC&gt; 0x6060B017
+[DEBUG] __init__(_handshake)2021-08-11 15:14:39,038--&gt; 1244.	 [#CF48]  C: &lt;HANDSHAKE&gt; 0x00030304 0x00000104 0x00000004 0x00000003
+[DEBUG] __init__(_handshake)2021-08-11 15:14:39,123--&gt; 1276.	 [#CF48]  S: &lt;HANDSHAKE&gt; 0x00000304
+[DEBUG] _bolt4(hello)2021-08-11 15:14:39,124--&gt; 401.	 [#CF48]  C: HELLO {&#39;user_agent&#39;: &#39;neo4j-python/4.3.4 Python/3.8.0-final-0 (linux)&#39;, &#39;scheme&#39;: &#39;basic&#39;, &#39;principal&#39;: &#39;neo4j&#39;, &#39;credentials&#39;: &#39;*******&#39;}
+[DEBUG] _bolt4(fetch_message)2021-08-11 15:14:39,197--&gt; 263.	 [#CF48]  S: SUCCESS {&#39;server&#39;: &#39;Neo4j/4.3.2&#39;, &#39;connection_id&#39;: &#39;bolt-1&#39;, &#39;hints&#39;: {}}
+[DEBUG] _bolt4(run)2021-08-11 15:14:39,201--&gt; 163.	 [#CF48]  C: RUN &#39;MATCH (n) RETURN n LIMIT 1&#39; {} {}
+[DEBUG] _bolt4(pull)2021-08-11 15:14:39,202--&gt; 181.	 [#CF48]  C: PULL {&#39;n&#39;: 1000}
+[DEBUG] _bolt4(fetch_message)2021-08-11 15:14:41,387--&gt; 263.	 [#CF48]  S: SUCCESS {&#39;t_first&#39;: 2105, &#39;fields&#39;: [&#39;n&#39;]}
+[DEBUG] _bolt4(fetch_message)2021-08-11 15:14:41,388--&gt; 263.	 [#CF48]  S: SUCCESS {&#39;bookmark&#39;: &#39;FB:kcwQTKkiSYOkR2u1/DVUDdLbswOQ&#39;, &#39;type&#39;: &#39;r&#39;, &#39;t_last&#39;: 21, &#39;db&#39;: &#39;neo4j&#39;}
+[DEBUG] _bolt4(reset)2021-08-11 15:14:41,389--&gt; 227.	 [#CF48]  C: RESET
+[DEBUG] _bolt4(fetch_message)2021-08-11 15:14:41,397--&gt; 263.	 [#CF48]  S: SUCCESS {}
+[DEBUG] _bolt4(run)2021-08-11 15:14:41,398--&gt; 163.	 [#CF48]  C: RUN &#34;CREATE (totem: Totem {eid:&#39;totem&#39;, is_test_data: true})&#34; {} {}
+[DEBUG] _bolt4(pull)2021-08-11 15:14:41,399--&gt; 181.	 [#CF48]  C: PULL {&#39;n&#39;: 1000}
+[DEBUG] _bolt4(fetch_message)2021-08-11 15:14:41,606--&gt; 263.	 [#CF48]  S: SUCCESS {&#39;t_first&#39;: 199, &#39;fields&#39;: []}
+[DEBUG] _bolt4(fetch_message)2021-08-11 15:14:41,608--&gt; 263.	 [#CF48]  S: SUCCESS {&#39;bookmark&#39;: &#39;FB:kcwQTKkiSYOkR2u1/DVUDdLbsweQ&#39;, &#39;stats&#39;: {&#39;labels-added&#39;: 1, &#39;nodes-created&#39;: 1, &#39;properties-set&#39;: 2}, &#39;type&#39;: &#39;w&#39;, &#39;t_last&#39;: 0, &#39;db&#39;: &#39;neo4j&#39;}
+[DEBUG] _bolt4(reset)2021-08-11 15:14:41,609--&gt; 227.	 [#CF48]  C: RESET
+[DEBUG] _bolt4(fetch_message)2021-08-11 15:14:41,611--&gt; 263.	 [#CF48]  S: SUCCESS {}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -281,72 +416,20 @@ Returns the container and the driver objects</p>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">HTTPError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/api/client.py</span> in <span class="ansi-cyan-fg">_raise_for_status</span><span class="ansi-blue-fg">(self, response)</span>
-<span class="ansi-green-intense-fg ansi-bold">    267</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 268</span><span class="ansi-red-fg">             </span>response<span class="ansi-blue-fg">.</span>raise_for_status<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    269</span>         <span class="ansi-green-fg">except</span> requests<span class="ansi-blue-fg">.</span>exceptions<span class="ansi-blue-fg">.</span>HTTPError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/requests/models.py</span> in <span class="ansi-cyan-fg">raise_for_status</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    952</span>         <span class="ansi-green-fg">if</span> http_error_msg<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 953</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> HTTPError<span class="ansi-blue-fg">(</span>http_error_msg<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    954</span> 
-
-<span class="ansi-red-fg">HTTPError</span>: 404 Client Error: Not Found for url: http+docker://localhost/v1.41/containers/6a4e53fb75b68a13cee5a6ddec19762778d8a0ac4ce23b365c12a251624892a3/stop
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">NotFound</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_22000/950193479.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>container<span class="ansi-blue-fg">.</span>stop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/models/containers.py</span> in <span class="ansi-cyan-fg">stop</span><span class="ansi-blue-fg">(self, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    434</span>                 If the server returns an error<span class="ansi-blue-fg">.</span>
-<span class="ansi-green-intense-fg ansi-bold">    435</span>         &#34;&#34;&#34;
-<span class="ansi-green-fg">--&gt; 436</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>client<span class="ansi-blue-fg">.</span>api<span class="ansi-blue-fg">.</span>stop<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>id<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    437</span> 
-<span class="ansi-green-intense-fg ansi-bold">    438</span>     <span class="ansi-green-fg">def</span> top<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/utils/decorators.py</span> in <span class="ansi-cyan-fg">wrapped</span><span class="ansi-blue-fg">(self, resource_id, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span>                     <span class="ansi-blue-fg">&#39;Resource ID was not provided&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">     18</span>                 )
-<span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> f<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> resource_id<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     20</span>         <span class="ansi-green-fg">return</span> wrapped
-<span class="ansi-green-intense-fg ansi-bold">     21</span>     <span class="ansi-green-fg">return</span> decorator
-
-<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/api/container.py</span> in <span class="ansi-cyan-fg">stop</span><span class="ansi-blue-fg">(self, container, timeout)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1168</span>             conn_timeout <span class="ansi-blue-fg">+=</span> timeout
-<span class="ansi-green-intense-fg ansi-bold">   1169</span>         res <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_post<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> params<span class="ansi-blue-fg">=</span>params<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">=</span>conn_timeout<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1170</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_raise_for_status<span class="ansi-blue-fg">(</span>res<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1171</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1172</span>     <span class="ansi-blue-fg">@</span>utils<span class="ansi-blue-fg">.</span>check_resource<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;container&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/api/client.py</span> in <span class="ansi-cyan-fg">_raise_for_status</span><span class="ansi-blue-fg">(self, response)</span>
-<span class="ansi-green-intense-fg ansi-bold">    268</span>             response<span class="ansi-blue-fg">.</span>raise_for_status<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    269</span>         <span class="ansi-green-fg">except</span> requests<span class="ansi-blue-fg">.</span>exceptions<span class="ansi-blue-fg">.</span>HTTPError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 270</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> create_api_error_from_http_exception<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    271</span> 
-<span class="ansi-green-intense-fg ansi-bold">    272</span>     <span class="ansi-green-fg">def</span> _result<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">,</span> json<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> binary<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/repos/MRanderson/.venv/lib/python3.8/site-packages/docker/errors.py</span> in <span class="ansi-cyan-fg">create_api_error_from_http_exception</span><span class="ansi-blue-fg">(e)</span>
-<span class="ansi-green-intense-fg ansi-bold">     29</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     30</span>             cls <span class="ansi-blue-fg">=</span> NotFound
-<span class="ansi-green-fg">---&gt; 31</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> cls<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">=</span>response<span class="ansi-blue-fg">,</span> explanation<span class="ansi-blue-fg">=</span>explanation<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span> 
-<span class="ansi-green-intense-fg ansi-bold">     33</span> 
-
-<span class="ansi-red-fg">NotFound</span>: 404 Client Error for http+docker://localhost/v1.41/containers/6a4e53fb75b68a13cee5a6ddec19762778d8a0ac4ce23b365c12a251624892a3/stop: Not Found (&#34;No such container: 6a4e53fb75b68a13cee5a6ddec19762778d8a0ac4ce23b365c12a251624892a3&#34;)</pre>
 </div>
-</div>
+    {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">notebook2script</span><span class="p">(</span><span class="n">_nbpath</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
